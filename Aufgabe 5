@@ -1,0 +1,45 @@
+const max = 10;
+
+let anzahlBewertung = 1;
+let bewertung = 0;
+console.log(`Maximale Hoehe der Bewertung: ${max} \nAnzahl der Bewertung: ${anzahlBewertung} \nBewertung: ${bewertung} \n`); const readline = require('readline');
+
+// Für die Eingabe über die Konsole
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question('Was ist ihre Bewertung ? ', function (nbewertung) {
+
+    if (nbewertung < 11) {
+        console.log(`Antwort: ${nbewertung}`);// Hier geben wir die eingegebene Antwort ausgeführt, falls Integer
+    } else {
+        console.log(`Falsche Eingabe!`);// Kein Integer und über 10 ist falsch
+    }
+
+    rl.question('Wie oft wollen Sie bewerten? ', function (anzahlb) {
+
+        var zufallMin = 1;
+        var zufallMax = 10;
+
+        function zufall(zufallMin, zufallMax) {
+            return Math.floor(Math.random() * (zufallMax - zufallMin)) + zufallMin;
+        }
+        var x = 0;
+        var neueAnzahlBewertung;
+        for (x; x < anzahlb; x++) {
+            console.log("");
+            console.log(`Anzahl der Bewertungen: ${anzahlb}`);
+            //Math.floor(Math.random() * (zufallMax - zufallMin)) + zufallMin;
+            console.log(`Zufallszahl: ${zufall(zufallMin, zufallMax)}`);
+            neueAnzahlBewertung = anzahlBewertung++;
+            console.log(`Anzahl der aktuellen Bewertungen: ${neueAnzahlBewertung}`);
+     
+
+        }
+
+     rl.close();
+
+    });
+});
