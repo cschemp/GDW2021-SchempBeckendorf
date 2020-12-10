@@ -1,0 +1,21 @@
+const max = 10;
+
+let anzahlBewertung = 0;
+let bewertung = 0;
+console.log(`Maximale Hoehe der Bewertung: ${max} \nAnzahl der Bewertung: ${anzahlBewertung} \nBewertung: ${bewertung} \n`);const readline = require('readline');
+
+const rl = readline.createInterface({ 
+    input: process.stdin, 
+    output: process.stdout 
+}); 
+
+rl.question('Was ist ihre Bewertung ? ', function (nbewertung) { 
+     
+    if (nbewertung < 11) {
+        console.log(`Antwort: ${nbewertung}`);// Hier geben wir die eingegebene Antwort aus
+    } else {
+        console.log(`Falsche Eingabe!`);
+    }
+    
+    rl.close(); 
+    }); 
