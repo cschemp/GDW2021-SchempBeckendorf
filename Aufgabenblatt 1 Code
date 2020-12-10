@@ -1,0 +1,50 @@
+//Aufgabeblatt 1, Aufgabe 3
+
+//WAS WIRD GEFRAGT ?
+//1.Erweitern  Sie  ihr  Programm  so,  dass  Sie  die  Bewertung  einer  App  durch  einen  Benutzer simulieren.
+//2.Lesen Sie  die  Bewertung  über  die  Konsole  ein.
+
+//const maxHoehe = 5;
+//let anzahlBewertung = 0;
+//let bewertung = 0;
+
+//Die Werte der Variablen werden ausgegeben.
+//console.log(`Maximale Höhe von Sternen:${maxHoehe}\t Anzahl von Bewertungen:${anzahlBewertung}\t Bewertung:${bewertung}\n`);
+
+
+// Einbinden des readline moduls
+ //constreadline = require(`readline`);
+ //constrl = readline.createInterface({
+   //   input: process.stdin,
+     //  output: process.stdout 
+    //});
+  //rl.question('Wie viele Sterne wollen Sie geben?', function(answer) { 
+    //  console.log(`Sie haben : ${answer} Sterne gegeben\t `);
+   // Hier geben wir die eingegebene answer aus
+   //rl.close(); 
+//});
+
+const max = 5;
+
+let anzahlBewertung = 0;
+let bewertung = 0;
+console.log(`Maximale Hoehe der Bewertung: ${max} \nAnzahl der Bewertung: ${anzahlBewertung} \nBewertung: ${bewertung} \n`);const readline = require('readline');
+
+const rl = readline.createInterface({ 
+    input: process.stdin, 
+    output: process.stdout 
+}); 
+
+rl.question('Was ist ihre Bewertung ? ', function (nbewertung) { 
+     
+    //Antwort wird ausgegeben
+    if (nbewertung < 11) {
+        console.log(`Antwort: ${nbewertung}`);
+    
+    
+    } else {
+        console.log(`Falsche Eingabe!`);
+    }
+    
+    rl.close(); 
+    }); 
