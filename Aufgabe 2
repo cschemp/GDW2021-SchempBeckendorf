@@ -1,0 +1,16 @@
+/* Um die maximale Höhe der möglichen Bewertungen einer App anzugeben, wird eine Konstante deklariert.
+Daraufhin werden zwei weitere Variablen deklariert, die die aktuelle Anzahl der Bewertungen beinhaltet 
+und eine die die Bewertung selbst ausgibt */
+
+const max = 10;
+
+let anzahlBewertung = 0;
+let bewertung = 0;
+console.log(`Maximale Hoehe der Bewertung: ${max} \nAnzahl der Bewertung: ${anzahlBewertung} \nBewertung: ${bewertung} \n`);
+
+// Neue Werte werden zugewiesen
+
+//max = 9;  sobald man einer Konstanten einen neuen Wert zuweist funktioniert das Programm nicht mehr!
+anzahlBewertung = 1;
+bewertung = 7;
+console.log(`Maximale Hoehe der Bewertung: ${ max } \nAnzahl der Bewertung: ${ anzahlBewertung } \nBewertung: ${ bewertung } \n`);
